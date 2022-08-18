@@ -14,6 +14,15 @@
                 text-align: center;
             }
 
+            #copied-message {
+                width: fit-content;
+                padding: 10px;
+                background-color: #349943;
+                color: white;
+                border-radius: 10px;
+                margin: auto;
+            }
+
             .content {
                 min-width: 300px;
                 width: 400px;
@@ -21,7 +30,7 @@
                 flex-direction: column;
                 align-items: center;
                 margin: auto;
-                margin-top: 45px;
+                margin-top: 20px;
                 background-color: #54545d;
                 padding: 15px 30px;
                 border-radius: 10px;
@@ -63,7 +72,7 @@
             #result {
                 background-color: #b7b5bb;
                 color: #1d1d20;
-                padding: 5px 10px;
+                padding: 10px;
                 margin-top: 10px;
                 border-radius: 10px;
             }
@@ -76,6 +85,9 @@
         </style>
     </head>
     <body>
+        <div id="copied-message">
+            Copiado!
+        </div>
         <div class="content">
             <h2>Gerador de daily para devs cansados</h2>
             <div id="form">
@@ -125,6 +137,7 @@
         <script>
             function init() {
                 document.getElementById('output').style.display = "none";
+                document.getElementById('copied-message').style.display = "none";
                 getDateToday();
             }
 
@@ -172,6 +185,9 @@
                 window.getSelection().addRange(range);
                 document.execCommand("copy");
                 window.getSelection().removeAllRanges();
+
+                document.getElementById('copied-message').style.display = "block";
+
             }
 
             window.onload = init();
