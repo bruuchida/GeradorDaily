@@ -7,12 +7,12 @@ window.onload = () => {
 function generateDaily() {
     let initialMessage = document.getElementById("initial-message").value;
     let date = document.getElementById("date").value;
-    let yesterday = getListFormat(document.querySelector("#yesterday-activities").value);
-    let today = getListFormat(document.querySelector("#today-activities").value);
-    let blocking = getListFormat(document.querySelector("#blocking-activities").value);
-    let goodThing = getListFormat(document.querySelector("#good-thing").value);
+    let yesterday = getListFormat(document.getElementById("yesterday-activities").value);
+    let today = getListFormat(document.getElementById("today-activities").value);
+    let blocking = getListFormat(document.getElementById("blocking-activities").value);
+    let goodThing = getListFormat(document.getElementById("good-thing").value);
 
-    let output = `
+    document.getElementById("output").innerHTML = `
         <b>${initialMessage}</b>
         <br><br>
         <b>Daily ${date}</b>
@@ -25,14 +25,12 @@ function generateDaily() {
         <br>
         <b>Impeditivo</b>
         <ul>${blocking}</ul>
+        <br>
         <b>Coisa boa</b>
         <ul>${goodThing}</ul>
     `;
 
-    document.getElementById("output").innerHTML = output;
-
     document.getElementById('form').style.display = "none";
-    document.getElementById('button-generate').style.display = "none";
     
     document.getElementById('result').style.display = "block";
 }
@@ -49,7 +47,6 @@ function getListFormat(text) {
 
 function backToDaily() {
     document.getElementById('form').style.display = "block";
-    document.getElementById('button-generate').style.display = "block";
     document.getElementById('result').style.display = "none";
 }
 
