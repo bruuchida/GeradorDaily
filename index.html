@@ -2,195 +2,49 @@
 <html>
     <head>
         <title>Gerador de daily para devs cansados</title>
-        <style>
-            body {
-                background-color: #1d1d20;
-                min-width: 300px;
-                font-family: Arial;
-                color:white;
-            }
-
-            h2, .author {
-                text-align: center;
-            }
-
-            #copied-message {
-                width: fit-content;
-                padding: 10px;
-                background-color: #349943;
-                color: white;
-                border-radius: 10px;
-                margin: auto;
-            }
-
-            .content {
-                min-width: 300px;
-                width: 400px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: auto;
-                margin-top: 20px;
-                background-color: #54545d;
-                padding: 15px 30px;
-                border-radius: 10px;
-            }
-
-            #button-generate, #button-copy, #button-back {
-                height: 50px;
-                border: 0;
-                border-radius: 10px;
-                font-size: 16px;
-                font-weight: bold;
-                color: white;
-                background-color:#348399;
-                cursor: pointer;
-            }
-
-            #form, #button-generate {
-                width: 100%;
-            }
-
-            .input {
-                display: flex;
-                flex-direction: column;
-                margin: 12px 0;
-            }
-
-            input, textarea {
-                padding: 12px;
-                border-radius: 10px;
-                border: 0;
-                background-color: #b7b5bb;
-            }
-
-            #output {
-                width: 400px;
-                margin: 20px 0;
-            }
-
-            #result {
-                background-color: #b7b5bb;
-                color: #1d1d20;
-                padding: 10px;
-                margin-top: 10px;
-                border-radius: 10px;
-            }
-
-            .controls {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 20px;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/variables-theme.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script type="text/javascript" src="./js/script.js"></script>
+        <link rel="icon" href="./icons/heart.svg">
     </head>
     <body>
-        <div id="copied-message">
-            Copiado!
-        </div>
         <div class="content">
-            <h2>Gerador de daily para devs cansados</h2>
+            <span class="title">Gerador de daily para devs cansados</span>
             <div id="form">
-                <div class="input">
-                    Mensagem inicial<input type="text" id="initial-message" value="Bom dia Time Calisto!"/>
+                <div class="field">
+                    Mensagem inicial<input type="text" id="initial-message" value="Bom dia Time Calisto! 🌞"/>
                 </div>
-                <div class="input">
-                    Data<input type="text" id="date" disabled/>
+                <div class="field">
+                    Data<input id="date" disabled />
                 </div>
-                <div class="input">
+                <div class="field">
                     Ontem<textarea id="yesterday-activities" rows="5"></textarea>
                 </div>
-                <div class="input">
+                <div class="field">
                     Hoje<textarea id="today-activities" rows="5"></textarea>
                 </div>
-                <div class="input">
-                    Impeditivo<textarea id="blocking-activities" rows="5">Nenhum</textarea>
+                <div class="field">
+                    Impeditivo<textarea id="blocking-activities">Nenhum</textarea>
                 </div>
-                <div class="input">
+                <div class="field">
                     Coisa boa<input type="text" id="good-thing" value="Nenhuma"/>
                 </div>
                 <button onclick="generateDaily()" id="button-generate">
                     GERAR DAILY
                 </button>
             </div>
-            <div id="output">
-                Prontinho! Agora só enviar...
-                <div id="result">
-                    <b><span id="result-initial-message"></span></b><br><br>
-                    <b>Daily <span id="result-date"></span></b><br><br>
-                    <b>Ontem</b>
-                    <ul id="result-yesterday-activities"></ul>
-                    <b>Hoje</b>
-                    <ul id="result-today-activities"></ul>
-                    <b>Impeditivo</b>
-                    <ul id="result-blocking-activities"></ul>
-                    <b>Coisa boa</b>
-                    <ul id="result-good-thing"></ul>
-                </div>
+            <div id="result">
+                Pronto! Agora só enviar... ✈️
+                <div id="output"></div>
                 <div class="controls">
-                    <button onclick="backToDaily()" id="button-back">< REVISAR</button>
+                    <button onclick="backToDaily()" id="button-back">REVISAR</button>
                     <button onclick="copyContent()" id="button-copy">COPIAR</button>
                 </div> 
             </div>
+            <div id="copied-message">
+                📝 Copiado!
+            </div>
         </div>
-        <p class="author">Feito por <a href="https://github.com/bruuchida" style="color:white;">@bruuchida</a></p>
-        <script>
-            function init() {
-                document.getElementById('output').style.display = "none";
-                document.getElementById('copied-message').style.display = "none";
-                getDateToday();
-            }
-
-            function getDateToday() {
-                var date = new Date();
-                let temp =  date.getDate() + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getFullYear();
-                document.querySelector('#date').value = temp;
-            }
-
-            function generateDaily() {
-                let initialMessage = document.getElementById("initial-message").value;
-                let date = document.getElementById("date").value;
-                let yesterday = getListFormat(document.querySelector("#yesterday-activities").value);
-                let today = getListFormat(document.querySelector("#today-activities").value);
-                let blocking = getListFormat(document.querySelector("#blocking-activities").value);
-                let goodThing = getListFormat(document.querySelector("#good-thing").value);
-
-                document.getElementById("result-initial-message").innerHTML = initialMessage;
-                document.getElementById("result-date").innerHTML = date;
-                document.getElementById("result-yesterday-activities").innerHTML = yesterday;
-                document.getElementById("result-today-activities").innerHTML = today;
-                document.getElementById("result-blocking-activities").innerHTML = blocking;
-                document.getElementById("result-good-thing").innerHTML = goodThing;
-
-                document.getElementById('form').style.display = "none";
-                document.getElementById('button-generate').style.display = "none";
-                document.getElementById('output').style.display = "block";
-            }
-
-            function getListFormat(text) {
-                var lines = text.split('\n');
-                return lines.filter(line => line.trim() !== '').map(line => `<li>${line}</li>`).join('');
-            }
-
-            function backToDaily() {
-                document.getElementById('form').style.display = "block";
-                document.getElementById('button-generate').style.display = "block";
-                document.getElementById('output').style.display = "none";
-            }
-
-            function copyContent() {
-                const range = document.createRange();
-                range.selectNode(document.getElementById("result"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(range);
-                document.execCommand("copy");
-                window.getSelection().removeAllRanges();
-
-                document.getElementById('copied-message').style.display = "block";
-
-            }
-
-            window.onload = init();
-        </script>
+        <p class="author">Feito por <a href="https://github.com/bruuchida">@bruuchida</a></p>
     </body>
 </html>
