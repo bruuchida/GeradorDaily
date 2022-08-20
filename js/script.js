@@ -2,6 +2,7 @@ window.onload = () => {
     var date = new Date();
     let temp =  date.getDate() + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getFullYear();
     document.getElementById('date').value = temp;
+    document.getElementById('dayBefore').innerText = getDayBefore();
 }
 
 function generateDaily() {
