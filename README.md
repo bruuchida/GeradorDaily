@@ -10,7 +10,7 @@ Gerador de daily para devs cansados
 
 ### Instalação
 
-1. Clone o repositório
+1. Clone o repositório ou baixe o .zip
 ```sh
 git clone git@github.com:bruuchida/GeradorDaily.git
 ```
