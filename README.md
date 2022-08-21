@@ -1,4 +1,4 @@
-# GeradorDaily
+# Gerador de Daily
 Gerador de daily para devs cansados 
 
 ## Criado com
