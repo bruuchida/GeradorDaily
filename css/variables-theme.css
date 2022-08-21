@@ -1,27 +1,24 @@
-:root {
-    /* Default Dark Theme */
-    /* --background: #1d1d20;
+.theme-default {
+    --background: #1d1d20;
     --form: #3a3a40;
     --text-form: #fff;
     --background-input: #58575a;
     --text-input: #fff;
     --buttons: #348399; 
     --copy-color: #349943;
-    */
+}
 
-    /* Blue Dark Theme */
-    /*                 
+.theme-dark-blue {            
     --background: #05032c;
-    --form: #0d0d41;
+    --form: #11114b;
     --text-form: #fff;
     --background-input: #1b1b57;
     --text-input: #fff;
     --buttons: #111a6c;
     --copy-color: #0f1c93;
-    */
+}
 
-    /* Blue Light Theme */
-    /* 
+.theme-light-blue {
     --background: #9690ff;
     --form: #b5b5ff;
     --text-form: #05032c;
@@ -29,10 +26,9 @@
     --text-input: #05032c;
     --buttons: #8e9aff;
     --copy-color: #4e5ff7;
-    */
+}
 
-    /* Pink Dark Theme */
-    /*     
+.theme-dark-pink {
     --background: #74214b;
     --form: #953464;
     --text-form: #fff;
@@ -40,10 +36,9 @@
     --text-input: #fff;
     --buttons: #501231;
     --copy-color: #c82b79; 
-    */
+}
 
-    /* Pink Light Theme */
-    /*     
+.theme-light-pink {
     --background: #e477ad;
     --form: #ffa9d4;
     --text-form: #c82b79;
@@ -51,10 +46,9 @@
     --text-input: #c82b79;
     --buttons: #f282ba;
     --copy-color: #ffa9d4;
-    */
+}
 
-    /* Purple Dark Theme */
-    /*     
+.theme-dark-purple{
     --background: #690c81;
     --form: #78208e;
     --text-form: #fff;
@@ -62,11 +56,9 @@
     --text-input: #fff;
     --buttons: #9f55b1;
     --copy-color: #9933b3; 
-    */
+}
 
-
-    /* Purple Light Theme */
-    
+.theme-light-purple {
     --background: #eeaffd;
     --form: #de97f0;
     --text-form: #fff;
@@ -74,5 +66,4 @@
     --text-input: #000;
     --buttons: #be6ed2;
     --copy-color: #9933b3;
-   
 }

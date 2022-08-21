@@ -1,8 +1,7 @@
 window.onload = () => {
-    var date = new Date();
-    let temp =  date.getDate() + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getFullYear();
-    document.getElementById('date').value = temp;
-    document.getElementById('dayBefore').innerText = getDayBefore();
+    document.getElementById('result').style.display = "none";
+    getTodayDate();
+    initTheme();
 }
 
 function generateDaily() {
@@ -13,7 +12,7 @@ function generateDaily() {
     let blocking = getListFormat(document.getElementById("blocking-activities").value);
     let goodThing = getListFormat(document.getElementById("good-thing").value);
 
-    document.getElementById("output").innerHTML = `
+    document.getElementById("daily").innerHTML = `
         <b>${initialMessage}</b>
         <br><br>
         <b>Daily ${date}</b>
@@ -36,6 +35,13 @@ function generateDaily() {
     document.getElementById('result').style.display = "block";
 }
 
+function getTodayDate() {
+    let date = new Date();
+    let temp =  date.getDate() + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getFullYear();
+    document.getElementById('date').value = temp;
+    document.getElementById('dayBefore').innerText = getDayBefore();
+}
+
 function getDayBefore() {
     let date = new Date();
     return date.getDay() == 1 ? 'Sexta' : 'Ontem';
@@ -53,7 +59,7 @@ function backToDaily() {
 
 function copyContent() {
     const range = document.createRange();
-    range.selectNode(document.getElementById("output"));
+    range.selectNode(document.getElementById("daily"));
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     document.execCommand("copy");
@@ -63,4 +69,28 @@ function copyContent() {
     setTimeout(()=> {
         document.getElementById('copied-message').classList.remove('show');
     }, 2000);
+}
+
+function initTheme() {
+    let localTheme = localStorage.getItem('theme');
+
+    if (localTheme === null) {
+        setTheme('theme-default');
+    } else {
+        setTheme(localTheme);
+    }
+}
+
+function setTheme(theme) {
+    localStorage.setItem('theme', theme);
+    document.documentElement.className = theme;
+}
+
+function changeTheme() {
+    let paletteStatus = document.getElementById('palette-container').classList;
+    if (paletteStatus.value == '') {
+        paletteStatus.add('show');
+    } else {
+        paletteStatus.remove('show');
+    }
 }

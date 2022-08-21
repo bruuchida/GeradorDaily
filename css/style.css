@@ -1,34 +1,45 @@
 body {
-    background-color: var(--background);
     min-width: 300px;
+    background-color: var(--background);
     font-family: Arial;
     color: var(--text-form);
 }
 
-#copied-message {
-    width: fit-content;
-    padding: 10px;
-    background-color: var(--copy-color);
+.palette {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--form);
     color: var(--text-form);
-    border-radius: 10px;
-    margin: auto;
-    position: fixed;
-    bottom: -50px;
-    transition: bottom 350ms;
+    cursor: pointer;
 }
 
-#copied-message.show {
-    bottom: 40px;
+#palette-container {
+    display: grid;
+    background-color: var(--form);
+    border-radius: 15px;
+    position: fixed;
+    top: 70px;
+    left: -50px;
+    transition: left 350ms;
+}
+
+#palette-container.show {
+    left: 18px;
+}
+
+.theme-choice {
+    border: 0;
+    border-radius: 50%;
+    margin: 8px;
+    padding: 8px;
+    background: var(--background);
+    cursor: pointer;
 }
 
 .content {
     min-width: 300px;
     width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: auto;
-    margin-top: 20px;
     background-color: var(--form);
     padding: 20px;
     border-radius: 10px;
@@ -38,21 +49,6 @@ body {
     font-size: 26px;
     font-weight: bold;
     text-align: center;
-}
-
-#button-generate, #button-copy, #button-back {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--text-form);
-    background-color: var(--buttons);
-    cursor: pointer;
-    height: 50px;
-    border: 0;
-    border-radius: 10px;
-}
-
-#form, #button-generate {
-    width: 100%;
 }
 
 .field {
@@ -72,30 +68,63 @@ input, textarea {
     resize: vertical;
 }
 
-#result {
-    display: none;
-    width: 400px;
-    margin: 20px 0;
+#button-generate, #button-back {
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-form);
+    background-color: var(--buttons);
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+}
+
+#button-generate {
+    width: 100%;
+}
+
+#button-copy {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    margin: 10px;
+}
+
+
+#form, #result {
+    width: 100%;
+    margin-top: 20px;
 }
 
 #output {
     background-color: var(--background-input);
     color: var(--text-input);
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px 0;
     border-radius: 10px;
-}
-
-.controls {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
-.author {
-    text-align: center;
+.footer {
+    display: flex;
+    justify-content: center;
 }
 
 a {
     color: var(--text-form);
+}
+
+#copied-message {
+    padding: 10px;
+    background-color: var(--copy-color);
+    color: var(--text-form);
+    border-radius: 10px;
+    position: fixed;
+    bottom: -50px;
+    transition: bottom 350ms;
+}
+
+#copied-message.show {
+    bottom: 40px;
 }
