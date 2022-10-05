@@ -58,6 +58,19 @@ body {
     margin: 20px 0;
 }
 
+.field--inline {
+    display: inline;
+    width: 100%;
+}
+
+.good-thing {
+    display: none;
+}
+
+.good-thing.show {
+    display: flex;
+}
+
 input, textarea {
     font-family: Arial;
     font-size: 14px;

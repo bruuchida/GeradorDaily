@@ -38,7 +38,10 @@
                     Impeditivo<textarea id="blocking-activities">Nenhum</textarea>
                 </div>
                 <div class="field">
-                    Coisa boa<input type="text" id="good-thing" value="Nenhuma"/>
+                    <div class="field--inline">
+                        <input type="checkbox" id="check-good-thing" onclick="toggleGoodThingField()">Coisa boa
+                    </div>
+                    <input type="text" id="good-thing" class="good-thing" value="Nenhuma"/>
                 </div>
                 <button onclick="generateDaily()" id="button-generate">
                     GERAR DAILY
