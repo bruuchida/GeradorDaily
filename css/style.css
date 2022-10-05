@@ -42,6 +42,7 @@ body {
     margin: auto;
     background-color: var(--form);
     padding: 20px;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
@@ -55,6 +56,19 @@ body {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
+}
+
+.field--inline {
+    display: inline;
+    width: 100%;
+}
+
+.good-thing {
+    display: none;
+}
+
+.good-thing.show {
+    display: flex;
 }
 
 input, textarea {

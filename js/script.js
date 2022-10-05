@@ -12,7 +12,7 @@ function generateDaily() {
     let blocking = getListFormat(document.getElementById("blocking-activities").value);
     let goodThing = getListFormat(document.getElementById("good-thing").value);
 
-    document.getElementById("daily").innerHTML = `
+    let daily = `
         <b>${initialMessage}</b>
         <br><br>
         <b>Daily ${date}</b>
@@ -25,10 +25,18 @@ function generateDaily() {
         <br>
         <b>Impeditivo</b>
         <ul>${blocking}</ul>
+    `;
+
+    let hasGoodThing = document.getElementById('check-good-thing').checked
+    if (hasGoodThing) {
+        daily += `
         <br>
         <b>Coisa boa</b>
         <ul>${goodThing}</ul>
-    `;
+        `
+    }
+
+    document.getElementById("daily").innerHTML = daily;
 
     document.getElementById('form').style.display = "none";
     
@@ -37,7 +45,7 @@ function generateDaily() {
 
 function getTodayDate() {
     let date = new Date();
-    let temp =  date.getDate() + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getFullYear();
+    let temp =  date.getDate().toString().padStart(2, 0) + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getFullYear();
     document.getElementById('date').value = temp;
     document.getElementById('dayBefore').innerText = getDayBefore();
 }
@@ -55,6 +63,17 @@ function getListFormat(text) {
 function backToDaily() {
     document.getElementById('form').style.display = "block";
     document.getElementById('result').style.display = "none";
+}
+
+function toggleGoodThingField() {
+    let check = document.getElementById('check-good-thing').checked;
+    let displayField = document.getElementById('good-thing').classList;
+
+    if (check) {
+        displayField.add('show');
+    } else {
+        displayField.remove('show');
+    }
 }
 
 function copyContent() {
