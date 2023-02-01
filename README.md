@@ -8,7 +8,7 @@ Gerador de daily para amigos cansados de formatar toda daily no bloco de notas
 - JS
 - Font Awesome v4.0
 
-### Acesso
+## Acesso
 
 Compartilhe com os coleguinhas pô!
 
