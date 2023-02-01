@@ -1,5 +1,5 @@
 # Gerador de Daily
-Gerador de daily para devs cansados 
+Gerador de daily para amigos cansados de formatar toda daily no bloco de notas
 
 ## Criado com
 
@@ -8,13 +8,9 @@ Gerador de daily para devs cansados
 - JS
 - Font Awesome v4.0
 
-### Instalação
+### Acesso
 
-1. Clone o repositório ou baixe o .zip
-```sh
-git clone git@github.com:bruuchida/GeradorDaily.git
-```
+Compartilhe com os coleguinhas pô!
 
-2. Abra o arquivo index.html em seu navegador
+<a href="https://bruuchida.github.io/GeradorDaily/" target="_blank"> Disponível para uso aqui!</a>
 
-3. Adicione aos seus favoritos para melhor acesso!
