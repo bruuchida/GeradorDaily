@@ -10,7 +10,7 @@ function generateDaily() {
     let yesterday = getListFormat(document.getElementById("yesterday-activities").value);
     let today = getListFormat(document.getElementById("today-activities").value);
     let blocking = getListFormat(document.getElementById("blocking-activities").value);
-    let goodThing = getListFormat(document.getElementById("good-thing").value);
+    let notice = getListFormat(document.getElementById("notice").value);
 
     let daily = `
         <b>${initialMessage}</b>
@@ -27,12 +27,12 @@ function generateDaily() {
         <ul>${blocking}</ul>
     `;
 
-    let hasGoodThing = document.getElementById('check-good-thing').checked
-    if (hasGoodThing) {
+    let hasNotice = document.getElementById('check-notice').checked
+    if (hasNotice) {
         daily += `
         <br>
-        <b>Coisa boa</b>
-        <ul>${goodThing}</ul>
+        <b>Aviso</b>
+        <ul>${notice}</ul>
         `
     }
 
@@ -65,9 +65,9 @@ function backToDaily() {
     document.getElementById('result').style.display = "none";
 }
 
-function toggleGoodThingField() {
-    let check = document.getElementById('check-good-thing').checked;
-    let displayField = document.getElementById('good-thing').classList;
+function toggleNoticeField() {
+    let check = document.getElementById('check-notice').checked;
+    let displayField = document.getElementById('notice').classList;
 
     if (check) {
         displayField.add('show');
@@ -88,6 +88,17 @@ function copyContent() {
     setTimeout(()=> {
         document.getElementById('copied-message').classList.remove('show');
     }, 2000);
+}
+
+function toggleEmojiPicker () {
+    let display = document.getElementById('emoji-picker').classList;
+
+    if (display.contains('show')) {
+        display.remove('show');
+    } else {
+        display.add('show');
+    }
+    
 }
 
 function initTheme() {

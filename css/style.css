@@ -54,20 +54,42 @@ body {
 
 .field {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin: 20px 0;
 }
 
-.field--inline {
-    display: inline;
+.field label, .field textarea, .field input {
     width: 100%;
 }
 
-.good-thing {
+
+.field--inline {
+    display: flex;
+}
+
+.emoji {
+    display: flex;
+    flex-direction: column;
+}
+
+.emoji-button {
+    cursor: pointer;
+}
+
+.emoji-picker {
     display: none;
 }
 
-.good-thing.show {
+.emoji-picker.show {
+    display: flex;
+}
+
+
+.notice {
+    display: none;
+}
+
+.notice.show {
     display: flex;
 }
 
