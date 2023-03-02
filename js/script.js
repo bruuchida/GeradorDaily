@@ -31,7 +31,7 @@ function generateDaily() {
     if (hasNotice) {
         daily += `
         <br>
-        <b>Coisa boa</b>
+        <b>Aviso</b>
         <ul>${notice}</ul>
         `
     }
@@ -65,7 +65,7 @@ function backToDaily() {
     document.getElementById('result').style.display = "none";
 }
 
-function toggleGoodThingField() {
+function toggleNoticeField() {
     let check = document.getElementById('check-notice').checked;
     let displayField = document.getElementById('notice').classList;
 
@@ -88,6 +88,17 @@ function copyContent() {
     setTimeout(()=> {
         document.getElementById('copied-message').classList.remove('show');
     }, 2000);
+}
+
+function toggleEmojiPicker () {
+    let display = document.getElementById('emoji-picker').classList;
+
+    if (display.contains('show')) {
+        display.remove('show');
+    } else {
+        display.add('show');
+    }
+    
 }
 
 function initTheme() {
