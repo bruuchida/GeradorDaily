@@ -63,11 +63,11 @@ body {
     width: 100%;
 }
 
-.good-thing {
+.notice {
     display: none;
 }
 
-.good-thing.show {
+.notice.show {
     display: flex;
 }
 

@@ -10,7 +10,7 @@ function generateDaily() {
     let yesterday = getListFormat(document.getElementById("yesterday-activities").value);
     let today = getListFormat(document.getElementById("today-activities").value);
     let blocking = getListFormat(document.getElementById("blocking-activities").value);
-    let goodThing = getListFormat(document.getElementById("good-thing").value);
+    let notice = getListFormat(document.getElementById("notice").value);
 
     let daily = `
         <b>${initialMessage}</b>
@@ -27,12 +27,12 @@ function generateDaily() {
         <ul>${blocking}</ul>
     `;
 
-    let hasGoodThing = document.getElementById('check-good-thing').checked
-    if (hasGoodThing) {
+    let hasNotice = document.getElementById('check-notice').checked
+    if (hasNotice) {
         daily += `
         <br>
         <b>Coisa boa</b>
-        <ul>${goodThing}</ul>
+        <ul>${notice}</ul>
         `
     }
 
@@ -66,8 +66,8 @@ function backToDaily() {
 }
 
 function toggleGoodThingField() {
-    let check = document.getElementById('check-good-thing').checked;
-    let displayField = document.getElementById('good-thing').classList;
+    let check = document.getElementById('check-notice').checked;
+    let displayField = document.getElementById('notice').classList;
 
     if (check) {
         displayField.add('show');
