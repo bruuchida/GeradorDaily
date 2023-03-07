@@ -68,17 +68,15 @@ body {
 }
 
 .emoji {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 385px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 15px;
     position: relative;
     bottom: 27px;
 }
 
 .emoji-button {
     cursor: pointer;
-    left: 370px;
 }
 
 .emoji-picker {
