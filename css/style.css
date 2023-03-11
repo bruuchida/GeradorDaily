@@ -68,8 +68,11 @@ body {
 }
 
 .emoji {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 15px;
+    position: relative;
+    bottom: 27px;
 }
 
 .emoji-button {
@@ -78,10 +81,17 @@ body {
 
 .emoji-picker {
     display: none;
+    top: 30px;
+    right: -15px;
+    width: 250px;
+    height: 250px;
+    --num-columns: 5;
+    --category-emoji-size: 1.125rem;
 }
 
 .emoji-picker.show {
     display: flex;
+    position: absolute;
 }
 
 

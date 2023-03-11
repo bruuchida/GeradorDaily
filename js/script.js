@@ -2,6 +2,10 @@ window.onload = () => {
     document.getElementById('result').style.display = "none";
     getTodayDate();
     initTheme();
+
+    document.querySelector('emoji-picker').addEventListener('emoji-click', e => {
+        document.getElementById("initial-message").value += e.detail.unicode
+    })
 }
 
 function generateDaily() {
