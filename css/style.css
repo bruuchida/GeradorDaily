@@ -5,33 +5,62 @@ body {
     color: var(--text-form);
 }
 
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 .palette {
-    padding: 15px;
+    width: 35px;
+    padding: 10px;
     border-radius: 50%;
-    background-color: var(--form);
+    background: var(--form);
     color: var(--text-form);
     cursor: pointer;
+}
+
+.palette:hover {
+    background: var(--background-input);
+}
+
+.palette:hover::after {
+    display: block;
+}
+
+.palette::after {
+    content: 'Paleta de cores';
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    background: var(--background-input);
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
 #palette-container {
     display: grid;
     background-color: var(--form);
     border-radius: 15px;
-    position: fixed;
-    top: 70px;
+    position: absolute;
+    top: 80px;
     left: -50px;
     transition: left 350ms;
 }
 
 #palette-container.show {
-    left: 18px;
+    left: 20px;
 }
 
-.theme-choice {
-    border: 0;
+.theme-choice::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    /* box-shadow: 0.5px 1px 10px #000; */
     border-radius: 50%;
     margin: 8px;
-    padding: 8px;
     background: var(--background);
     cursor: pointer;
 }
@@ -123,6 +152,8 @@ input, textarea {
     cursor: pointer;
     border: 0;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 #button-generate {
@@ -130,7 +161,7 @@ input, textarea {
 }
 
 #button-copy {
-    background-color: transparent;
+    width: 32px;
     cursor: pointer;
     border: 0;
     margin: 10px;
@@ -155,10 +186,21 @@ input, textarea {
 .footer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: var(--text-form);
 }
 
-a {
-    color: var(--text-form);
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author::after {
+    content: "";
+    display: inline-block;
+    background: url("../icons/moon.svg") no-repeat;
+    width: 24px;
+    height: 24px;
 }
 
 #copied-message {

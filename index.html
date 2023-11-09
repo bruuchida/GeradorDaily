@@ -6,21 +6,24 @@
         <link rel="stylesheet" href="./css/style.css">
         <script type="text/javascript" src="./js/script.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>   
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="./icons/icon-notepad.svg">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+        <link rel="icon" href="./icons/favicon.ico">
     </head>
     <body>
-        <i class="fa fa-paint-brush fa-md palette" onclick="changeTheme()"></i>
-        <div id="palette-container">
-            <button class="theme-choice theme-default" onclick="setTheme('theme-default')"></button>
-            <button class="theme-choice theme-dark-blue" onclick="setTheme('theme-dark-blue')"></button>
-            <button class="theme-choice theme-dark-purple" onclick="setTheme('theme-dark-purple')"></button>
-            <button class="theme-choice theme-dark-pink" onclick="setTheme('theme-dark-pink')"></button>
-            <button class="theme-choice theme-light-pink"  onclick="setTheme('theme-light-pink')"></button>
-            <button class="theme-choice theme-light-purple" onclick="setTheme('theme-light-purple')"></button>
-            <button class="theme-choice theme-light-blue" onclick="setTheme('theme-light-blue')"></button>
+        <div class="palette" onclick="changeTheme()">
+            <img src="./icons/palette.svg" alt="">
         </div>
-        <div class="content">
+        <div id="palette-container">
+            <span class="theme-choice theme-default" onclick="setTheme('theme-default')"></span>
+            <span class="theme-choice theme-dark-blue" onclick="setTheme('theme-dark-blue')"></span>
+            <span class="theme-choice theme-dark-purple" onclick="setTheme('theme-dark-purple')"></span>
+            <span class="theme-choice theme-dark-pink" onclick="setTheme('theme-dark-pink')"></span>
+            <span class="theme-choice theme-light-pink"  onclick="setTheme('theme-light-pink')"></span>
+            <span class="theme-choice theme-light-purple" onclick="setTheme('theme-light-purple')"></span>
+            <span class="theme-choice theme-light-blue" onclick="setTheme('theme-light-blue')"></span>
+        </div>
+        <main class="content">
             <div class="title">Gerador de daily</div>
             <div id="form">
                 <div class="field">
@@ -61,16 +64,17 @@
                 Pronto! Agora só enviar...
                 <div id="output">
                     <div id="daily"></div>
-                    <i class="fa fa-clone fa-lg" id="button-copy" onclick="copyContent()" title="Copiar"></i>
+                    <img src="./icons/copy.svg" id="button-copy" onclick="copyContent()" title="Copiar">
                 </div>
-                    <button onclick="backToDaily()" id="button-back"><i class="fa fa-chevron-left"></i> REVISAR</button>
+                <div onclick="backToDaily()" id="button-back">
+                    <img src="./icons/back.svg" alt="">
+                    REVISAR
+                </div>
             </div>
-        </div>
-        <div class="footer">
-            <p class="author">Feito por <a href="https://github.com/bruuchida">@bruuchida</a> <i class="fa fa-heart"></i></p>
-            <div id="copied-message">
-                📝 Copiado!
-            </div>
-        </div>
+        </main>
+        <footer class="footer">
+            Feito por <a href="https://github.com/bruuchida" class="author">@bruuchida</a>
+            <span id="copied-message"> 📝 Copiado! </span>
+        </footer>
     </body>
 </html>
