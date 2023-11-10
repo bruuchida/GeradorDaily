@@ -2,11 +2,9 @@
 <html>
     <head>
         <title>Gerador de daily</title>
-        <link rel="stylesheet" href="./css/variables-theme.css">
         <link rel="stylesheet" href="./css/style.css">
         <script type="text/javascript" src="./js/script.js"></script>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>   
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 
         <link rel="icon" href="./icons/favicon.ico">
     </head>
@@ -30,7 +28,7 @@
                     <label>Mensagem inicial</label>
                     <input type="text" id="initial-message" value="Bom dia"/>
                     <div class="emoji">
-                        <i id="emoji-button" class="fa fa-smile-o fa-sm emoji-button" onclick="toggleEmojiPicker()"></i>
+                        <img src="./icons/emoji.svg" id="emoji-button" class="emoji-button" onclick="toggleEmojiPicker()"/>
                         <emoji-picker id="emoji-picker" class="emoji-picker"></emoji-picker>
                     </div>
                 </div>
@@ -40,21 +38,27 @@
                 </div>
                 <div class="field">
                     <label id="dayBefore"></label>
-                    <textarea id="yesterday-activities"></textarea>
+                    <textarea id="yesterday-activities" placeholder="Task A
+Task B"></textarea>
                 </div>
                 <div class="field">
                     <label>Hoje</label>
-                    <textarea id="today-activities"></textarea>
+                    <textarea id="today-activities" placeholder="Task A
+Task B"></textarea>
                 </div>
                 <div class="field">
-                    <label>Impeditivo</label>
-                    <textarea id="blocking-activities">Nenhum</textarea>
-                </div>
-                <div class="field">
-                    <div class="field--inline">
-                        <input type="checkbox" id="check-notice" onclick="toggleNoticeField()">Aviso
+                    <div>
+                        <input type="checkbox" id="check-blocking-activities" onclick="toggleBlockingActivitiesField()"/>
+                        <label for="check-blocking-activities">Informar impeditivo</label>
                     </div>
-                    <input type="text" id="notice" class="notice" value="Nenhum"/>
+                    <input type="text" id="blocking-activities" class="notice"/>
+                </div>
+                <div class="field">
+                    <div>
+                        <input type="checkbox" id="check-notice" onclick="toggleNoticeField()"/>
+                        <label for="check-notice">Informar ausência</label>
+                    </div>
+                    <input type="text" id="notice" class="notice"/>
                 </div>
                 <button onclick="generateDaily()" id="button-generate">
                     GERAR DAILY

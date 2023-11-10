@@ -26,18 +26,14 @@ function generateDaily() {
         <br>
         <b>Hoje</b>
         <ul>${today}</ul>
-        <br>
-        <b>Impeditivo</b>
-        <ul>${blocking}</ul>
     `;
 
-    let hasNotice = document.getElementById('check-notice').checked
-    if (hasNotice) {
-        daily += `
-        <br>
-        <b>Aviso</b>
-        <ul>${notice}</ul>
-        `
+    if (document.getElementById('check-blocking-activities').checked) {
+        daily += `<br><b>Impeditivo</b><ul>${blocking}</ul>`
+    }
+
+    if (document.getElementById('check-notice').checked) {
+        daily += `<br><b>Aviso</b><ul>${notice}</ul>`
     }
 
     document.getElementById("daily").innerHTML = daily;
@@ -65,13 +61,24 @@ function getListFormat(text) {
 }
 
 function backToDaily() {
-    document.getElementById('form').style.display = "block";
+    document.getElementById('form').style.display = "grid";
     document.getElementById('result').style.display = "none";
 }
 
 function toggleNoticeField() {
     let check = document.getElementById('check-notice').checked;
     let displayField = document.getElementById('notice').classList;
+
+    if (check) {
+        displayField.add('show');
+    } else {
+        displayField.remove('show');
+    }
+}
+
+function toggleBlockingActivitiesField() {
+    let check = document.getElementById('check-blocking-activities').checked;
+    let displayField = document.getElementById('blocking-activities').classList;
 
     if (check) {
         displayField.add('show');

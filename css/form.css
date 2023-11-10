@@ -1,0 +1,106 @@
+
+.content {
+    min-width: 300px;
+    max-width: 400px;
+    margin: auto;
+    background-color: var(--form);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.field {
+    display: grid;
+    gap: 4px;
+}
+
+.emoji {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+img#emoji-button {
+    position: absolute;
+    bottom: 11px;
+    left: calc(100% - 32px);
+}
+
+.emoji-picker {
+    display: none;
+    top: 30px;
+    right: -15px;
+    width: 250px;
+    height: 250px;
+    /* variables from emoji picker lib */
+    --num-columns: 5;
+    --category-emoji-size: 1.125rem;
+}
+
+.emoji-picker.show {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+
+.notice, .blocking-activities {
+    display: none;
+}
+
+.notice.show, .blocking-activities.show {
+    display: block;
+}
+
+#button-generate, #button-back {
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-form);
+    background-color: var(--buttons);
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-back {
+    width: max-content;
+    padding: 0 20px;
+    gap: 5px;
+}
+
+#form {
+    display: grid;
+    gap: 12px;
+}
+
+#output {
+    background-color: var(--background-input);
+    color: var(--text-input);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+
+#button-copy {
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+}
+
+#daily {
+    padding: 10px;
+}
