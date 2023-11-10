@@ -1,69 +1,65 @@
-.theme-default {
+.theme-dark-default {
     --background: #1d1d20;
     --form: #3a3a40;
-    --text-form: #fff;
-    --background-input: #58575a;
-    --text-input: #fff;
-    --buttons: #348399; 
-    --copy-color: #349943;
+    --input: #58575a;
+    --text: #fff;
+    --button: #348399; 
+    --ballon: #349943;
+    --hover: #58575a;
+    --button-hover: #216173;
 }
 
-.theme-dark-blue {            
-    --background: #05032c;
-    --form: #11114b;
-    --text-form: #fff;
-    --background-input: #1b1b57;
-    --text-input: #fff;
-    --buttons: #111a6c;
-    --copy-color: #0f1c93;
-}
-
-.theme-light-blue {
-    --background: #9690ff;
-    --form: #b5b5ff;
-    --text-form: #05032c;
-    --background-input: #ceceff;
-    --text-input: #05032c;
-    --buttons: #8e9aff;
-    --copy-color: #4e5ff7;
+.theme-light-default {
+    --background: #e3e2e2;
+    --form: #ffffff;
+    --input: #eceaf0;
+    --text: #292828;
+    --button: #42bddf; 
+    --ballon: #349943;
+    --hover: #bdbbc0;
+    --button-hover: #3b9fba;
 }
 
 .theme-dark-pink {
     --background: #74214b;
     --form: #953464;
-    --text-form: #fff;
-    --background-input: #a54a78;
-    --text-input: #fff;
-    --buttons: #501231;
-    --copy-color: #c82b79; 
+    --input: #a54a78;
+    --text: #fff;
+    --button: #69133e;
+    --ballon: #c82b79; 
+    --hover: #a54a78;
+    --button-hover: #501231;
 }
 
 .theme-light-pink {
     --background: #e477ad;
     --form: #ffa9d4;
-    --text-form: #c82b79;
-    --background-input: #ffc0e0;
-    --text-input: #c82b79;
-    --buttons: #f282ba;
-    --copy-color: #ffa9d4;
+    --input: #ffc0e0;
+    --text: #c82b79;
+    --button: #f282ba;
+    --ballon: #ffa9d4;
+    --hover: #ffc0e0;
+    --button-hover: #c96e9b;
 }
 
 .theme-dark-purple{
     --background: #690c81;
     --form: #78208e;
-    --text-form: #fff;
-    --background-input: #823096;
-    --text-input: #fff;
-    --buttons: #9f55b1;
-    --copy-color: #9933b3; 
+    --input: #823096;
+    --text: #fff;
+    --button: #9f55b1;
+    --ballon: #9933b3;
+    --hover: #823096;
+    --button-hover: #874397;
 }
 
 .theme-light-purple {
-    --background: #eeaffd;
-    --form: #de97f0;
-    --text-form: #fff;
-    --background-input: #fceeff;
-    --text-input: #000;
-    --buttons: #be6ed2;
-    --copy-color: #9933b3;
+    --background: #d078e6;
+    --form: #dc91ef;
+    --input: #e0a8ed;
+    --text: #571169;
+    --button: #be6ed2;
+    --ballon: #9933b3;
+    --hover: #b866ca;
+    --button-hover: #a158b3;
 }

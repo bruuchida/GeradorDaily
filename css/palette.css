@@ -3,12 +3,12 @@
     padding: 10px;
     border-radius: 50%;
     background: var(--form);
-    color: var(--text-form);
+    color: var(--text);
     cursor: pointer;
 }
 
 .palette:hover {
-    background: var(--background-input);
+    background: var(--hover);
 }
 
 .palette:hover::after {
@@ -21,7 +21,7 @@
     position: absolute;
     top: 20px;
     left: 75px;
-    background: var(--background-input);
+    background: var(--hover);
     padding: 8px 12px;
     border-radius: 4px;
 }
@@ -45,9 +45,9 @@
     left: 20px;
 }
 
-#palette-container:hover {
-    background: var(--background-input);
-}
+/* #palette-container:hover {
+    background: var(--hover);
+} */
 
 .theme-choice::before {
     content: "";
@@ -61,5 +61,5 @@
 }
 
 .theme-choice:hover::before {
-    box-shadow: 0.5px 0 10px #fff;
+    box-shadow: 0.5px 0 10px var(--hover);
 }

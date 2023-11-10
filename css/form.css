@@ -1,9 +1,8 @@
-
 .content {
     min-width: 300px;
     max-width: 400px;
     margin: auto;
-    background-color: var(--form);
+    background: var(--form);
     padding: 20px;
     border-radius: 10px;
 }
@@ -63,8 +62,8 @@ img#emoji-button {
     height: 50px;
     font-size: 16px;
     font-weight: bold;
-    color: var(--text-form);
-    background-color: var(--buttons);
+    color: var(--text);
+    background-color: var(--button);
     cursor: pointer;
     border: 0;
     border-radius: 10px;
@@ -79,14 +78,18 @@ img#emoji-button {
     gap: 5px;
 }
 
+#button-generate:hover, #button-back:hover {
+    background: var(--button-hover);
+}
+
 #form {
     display: grid;
     gap: 12px;
 }
 
 #output {
-    background-color: var(--background-input);
-    color: var(--text-input);
+    background-color: var(--input);
+    color: var(--text);
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;

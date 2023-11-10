@@ -3,9 +3,9 @@
 @import url("./form.css");
 
 body {
-    background-color: var(--background);
+    background: var(--background);
     font-family: Arial;
-    color: var(--text-form);
+    color: var(--text);
 }
 
 a {
@@ -17,8 +17,8 @@ a {
 input, textarea {
     font-family: Arial;
     font-size: 14px;
-    color: var(--text-input);
-    background-color: var(--background-input);
+    color: var(--text);
+    background: var(--input);
     border: 0;
     border-radius: 10px;
     padding: 12px;    
@@ -33,7 +33,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--text-form);
+    color: var(--text);
 }
 
 .author {
@@ -52,8 +52,8 @@ textarea {
 
 #copied-message {
     padding: 10px;
-    background-color: var(--copy-color);
-    color: var(--text-form);
+    background-color: var(--ballon);
+    color: var(--text);
     border-radius: 10px;
     position: fixed;
     bottom: -50px;

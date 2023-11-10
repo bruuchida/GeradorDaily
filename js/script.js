@@ -116,7 +116,7 @@ function initTheme() {
     let localTheme = localStorage.getItem('theme');
 
     if (localTheme === null) {
-        setTheme('theme-default');
+        setTheme('theme-dark-default');
     } else {
         setTheme(localTheme);
     }
