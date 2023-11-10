@@ -6,6 +6,10 @@ window.onload = () => {
     document.querySelector('emoji-picker').addEventListener('emoji-click', e => {
         document.getElementById("initial-message").value += e.detail.unicode
     })
+
+    document.addEventListener('click', e => {
+        if (e.target.id !== 'emoji-button' && document.getElementById('emoji-picker').classList.contains('show')) toggleEmojiPicker();
+    })
 }
 
 function generateDaily() {
