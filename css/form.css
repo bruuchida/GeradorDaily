@@ -29,6 +29,7 @@ img#emoji-button {
     position: absolute;
     bottom: 11px;
     left: calc(100% - 32px);
+    filter: var(--icon-color);
 }
 
 .emoji-picker {
@@ -78,6 +79,10 @@ img#emoji-button {
     gap: 5px;
 }
 
+#button-back img {
+    filter: var(--icon-color);
+}
+
 #button-generate:hover, #button-back:hover {
     background: var(--button-hover);
 }
@@ -102,6 +107,7 @@ img#emoji-button {
     cursor: pointer;
     border: 0;
     padding: 10px;
+    filter: var(--icon-color);
 }
 
 #daily {

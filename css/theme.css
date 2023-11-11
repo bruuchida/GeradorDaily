@@ -7,6 +7,7 @@
     --ballon: #349943;
     --hover: #58575a;
     --button-hover: #216173;
+    --icon-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(101%);
 }
 
 .theme-light-default {
@@ -18,6 +19,7 @@
     --ballon: #349943;
     --hover: #bdbbc0;
     --button-hover: #3b9fba;
+    --icon-color:  invert(11%) sepia(0%) saturate(0%) hue-rotate(239deg) brightness(94%) contrast(86%);
 }
 
 .theme-dark-pink {
@@ -29,6 +31,7 @@
     --ballon: #c82b79; 
     --hover: #a54a78;
     --button-hover: #501231;
+    --icon-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(101%);
 }
 
 .theme-light-pink {
@@ -40,6 +43,7 @@
     --ballon: #ffa9d4;
     --hover: #ffc0e0;
     --button-hover: #c96e9b;
+    --icon-color: invert(22%) sepia(71%) saturate(3106%) hue-rotate(312deg) brightness(87%) contrast(84%);
 }
 
 .theme-dark-purple{
@@ -51,6 +55,7 @@
     --ballon: #9933b3;
     --hover: #823096;
     --button-hover: #874397;
+    --icon-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(101%);
 }
 
 .theme-light-purple {
@@ -62,4 +67,5 @@
     --ballon: #9933b3;
     --hover: #b866ca;
     --button-hover: #a158b3;
+    --icon-color: invert(12%) sepia(39%) saturate(5282%) hue-rotate(276deg) brightness(92%) contrast(102%);
 }

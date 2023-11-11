@@ -1,16 +1,17 @@
 .palette {
     width: 35px;
+    height: 35px;
     padding: 10px;
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 50%;
     background: var(--form);
-    color: var(--text);
     cursor: pointer;
+
 }
 
 .palette:hover {
-    background: var(--hover);
+    background-color: var(--hover);
 }
 
 .palette:hover::after {
@@ -31,6 +32,7 @@
 .palette img {
     display: block;
     margin: auto;
+    filter: var(--icon-color);
 }
 
 #palette-container {

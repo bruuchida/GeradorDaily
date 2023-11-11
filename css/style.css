@@ -36,23 +36,17 @@ textarea {
 .footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     color: var(--text);
+    gap: 4px;
 }
 
-.author {
-    display: flex;
-    align-items: center;
-}
-
-.author::after {
-    content: "";
+.footer img {
     display: inline-block;
-    background: url("../icons/moon.svg") no-repeat;
     width: 24px;
     height: 24px;
+    filter: var(--icon-color);
 }
-
 
 #copied-message {
     padding: 10px;
