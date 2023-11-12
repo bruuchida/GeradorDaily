@@ -1,4 +1,4 @@
-.palette {
+.palette-container {
     width: 35px;
     height: 35px;
     padding: 10px;
@@ -7,53 +7,53 @@
     cursor: pointer;
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
 }
 
-.palette:hover {
+.palette-container:hover {
     background-color: var(--hover);
 }
 
-.palette:hover::after {
-    display: block;
-}
-
-.palette::after {
-    content: 'Paleta de cores';
-    display: none;
-    width: max-content;
-    position: absolute;
-    top: 14px;
-    left: 75px;
-    background: var(--hover);
-    padding: 8px 12px;
-    border-radius: 4px;
-}
-
-.palette img {
+#palette {
     display: block;
     padding: 10px;
     margin: -10px 0 0 -8px;
     filter: var(--icon-color);
 }
 
+.palette-container::before {
+    content: 'Paleta de cores';
+    display: none;
+    width: max-content;
+    position: absolute;
+    top: 14px;
+    right: 75px;
+    background: var(--hover);
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.palette-container:hover::before {
+    display: block;
+}
+
+
+
 #themes {
     display: grid;
+    visibility: hidden;
+    opacity: 0;
     background-color: var(--form);
     border-radius: 15px;
     position: absolute;
     top: 80px;
-    left: -50px;
-    transition: left 350ms;
+    transition: visibility 200ms, opacity 150ms;
 }
 
 #themes.show {
-    left: 20px;
+    visibility: visible;
+    opacity: 1;
 }
-
-/* #palette-container:hover {
-    background: var(--hover);
-} */
 
 .theme-choice::before {
     content: "";

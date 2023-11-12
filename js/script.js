@@ -10,7 +10,8 @@ window.onload = () => {
 
     document.addEventListener('click', e => {
         if (e.target.id !== 'emoji-button' && document.querySelector('#emoji-picker').classList.contains('show')) toggleEmojiPicker();
-        if (e.target.id !== 'palette' && document.querySelector('#themes').classList.contains('show')) togglePalette();
+        if (e.target.id !== 'palette' && !e.target.classList.contains('theme-choice') 
+            && document.querySelector('#themes').classList.contains('show')) togglePalette();
     })
 }
 

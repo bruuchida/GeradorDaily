@@ -2,24 +2,26 @@
 <html>
     <head>
         <title>Gerador de daily</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <script type="text/javascript" src="./js/script.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
-
         <link rel="icon" href="./icons/favicon.ico">
     </head>
     <body>
-        <div class="palette" onclick="togglePalette()">
-            <img src="./icons/palette.svg" alt="" id="palette">
+        <div class="palette-container">
+            <img src="./icons/palette.svg" alt="" id="palette" onclick="togglePalette()">
+            <div id="themes">
+                <span class="theme-choice theme-dark-default" onclick="setTheme('theme-dark-default')"></span>
+                <span class="theme-choice theme-light-default" onclick="setTheme('theme-light-default')"></span>
+                <span class="theme-choice theme-dark-purple" onclick="setTheme('theme-dark-purple')"></span>
+                <span class="theme-choice theme-dark-pink" onclick="setTheme('theme-dark-pink')"></span>
+                <span class="theme-choice theme-light-purple" onclick="setTheme('theme-light-purple')"></span>
+                <span class="theme-choice theme-light-pink"  onclick="setTheme('theme-light-pink')"></span>
+            </div>
         </div>
-        <div id="themes">
-            <span class="theme-choice theme-dark-default" onclick="setTheme('theme-dark-default')"></span>
-            <span class="theme-choice theme-light-default" onclick="setTheme('theme-light-default')"></span>
-            <span class="theme-choice theme-dark-purple" onclick="setTheme('theme-dark-purple')"></span>
-            <span class="theme-choice theme-dark-pink" onclick="setTheme('theme-dark-pink')"></span>
-            <span class="theme-choice theme-light-purple" onclick="setTheme('theme-light-purple')"></span>
-            <span class="theme-choice theme-light-pink"  onclick="setTheme('theme-light-pink')"></span>
-        </div>
+
         <main class="content">
             <h1 class="title">Gerador de daily</h1>
             <div id="form">
@@ -75,8 +77,9 @@ Task B"></textarea>
                 </div>
             </div>
         </main>
+
         <footer class="footer">
-            Feito por <a href="https://github.com/bruuchida" class="author">@bruuchida</a>
+            Feito por <a href="https://github.com/bruuchida" target="_blank" class="author">@bruuchida</a>
             <img src="../icons/moon.svg" alt="">
             <span id="copied-message"> 📝 Copiado! </span>
         </footer>
