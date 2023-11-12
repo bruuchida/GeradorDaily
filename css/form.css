@@ -13,6 +13,11 @@
     margin-bottom: 20px;
 }
 
+#form {
+    display: grid;
+    gap: 12px;
+}
+
 .field {
     display: grid;
     gap: 4px;
@@ -24,7 +29,7 @@
     cursor: pointer;
 }
 
-img#emoji-button {
+#emoji-button {
     position: absolute;
     bottom: 11px;
     left: calc(100% - 32px);
@@ -57,60 +62,25 @@ img#emoji-button {
     display: block;
 }
 
-#button-generate, #button-back {
-    height: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--text);
-    background-color: var(--button);
-    cursor: pointer;
-    border: 0;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#button-generate {
+    width: 100%;
 }
 
-#button-back {
-    width: max-content;
-    padding: 0 20px;
-    gap: 5px;
-}
-
-#button-back img {
-    filter: var(--icon-color);
-}
-
-#button-generate:hover, #button-back:hover {
-    background: var(--button-hover);
-}
-
-#form {
-    display: grid;
-    gap: 12px;
-}
-
-#output {
-    background-color: var(--input);
-    color: var(--text);
+#daily {
+    background: var(--input);
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: start;
 }
 
 #result {
     display: none;
 }
 
-#button-copy {
-    cursor: pointer;
-    border: 0;
-    padding: 10px;
-    filter: var(--icon-color);
-}
-
-#daily {
-    padding: 10px;
+.actions {
+    display: flex;
+    justify-content: space-between;
 }

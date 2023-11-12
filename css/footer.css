@@ -1,0 +1,29 @@
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--text);
+    gap: 4px;
+}
+
+.footer img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    filter: var(--icon-color);
+}
+
+#copied-message {
+    padding: 10px;
+    background-color: var(--ballon);
+    color: var(--text);
+    border-radius: 10px;
+    position: fixed;
+    bottom: -50px;
+    transition: bottom 350ms;
+}
+
+#copied-message.show {
+    bottom: 40px;
+}

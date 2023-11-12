@@ -1,6 +1,7 @@
 @import url("./theme.css");
 @import url("./palette.css");
 @import url("./form.css");
+@import url("./footer.css");
 
 body {
     width: 100%;
@@ -15,6 +16,7 @@ a {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color: var(--text);
 }
 
 input, textarea {
@@ -32,31 +34,35 @@ textarea {
     height: 60px;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+button {
+    width: max-content;
+    height: 50px;
     color: var(--text);
-    gap: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    background: var(--button);
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 20px;
 }
 
-.footer img {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
+button img {
     filter: var(--icon-color);
 }
 
-#copied-message {
-    padding: 10px;
-    background-color: var(--ballon);
-    color: var(--text);
-    border-radius: 10px;
-    position: fixed;
-    bottom: -50px;
-    transition: bottom 350ms;
+button:hover {
+    background: var(--button-hover);
 }
 
-#copied-message.show {
-    bottom: 40px;
+input[type="checkbox" i] {
+    accent-color: var(--button);
+}
+
+input[type="checkbox" i]:hover {
+    accent-color: var(--button);
 }

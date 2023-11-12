@@ -67,13 +67,17 @@ Task B"></textarea>
             </div>
             <div id="result">
                 Pronto! Agora só enviar...
-                <div id="output">
-                    <div id="daily"></div>
-                    <img src="./icons/copy.svg" id="button-copy" onclick="copyContent()" title="Copiar">
+                <div id="daily">
                 </div>
-                <div id="button-back" onclick="backToDaily()">
-                    <img src="./icons/back.svg" alt="">
-                    REVISAR
+                <div class="actions">
+                    <button id="button-back" onclick="backToDaily()">
+                        <img src="./icons/back.svg" alt="">
+                        REVISAR
+                    </button>
+                    <button id="button-copy" onclick="copyContent()">
+                        COPIAR
+                        <img src="./icons/copy.svg" alt="">
+                    </button>
                 </div>
             </div>
         </main>
