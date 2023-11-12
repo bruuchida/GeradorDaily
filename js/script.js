@@ -9,6 +9,7 @@ window.onload = () => {
 
     document.addEventListener('click', e => {
         if (e.target.id !== 'emoji-button' && document.getElementById('emoji-picker').classList.contains('show')) toggleEmojiPicker();
+        if (e.target.id !== 'palette' && document.getElementById('palette-container').classList.contains('show')) togglePalette();
     })
 }
 
@@ -128,10 +129,10 @@ function initTheme() {
 
 function setTheme(theme) {
     localStorage.setItem('theme', theme);
-    document.documentElement.className = theme;
+    document.body.className = theme;
 }
 
-function changeTheme() {
+function togglePalette() {
     let paletteStatus = document.getElementById('palette-container').classList;
     if (paletteStatus.value == '') {
         paletteStatus.add('show');

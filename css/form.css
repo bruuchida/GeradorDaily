@@ -1,7 +1,6 @@
 .content {
-    min-width: 300px;
     max-width: 400px;
-    margin: auto;
+    margin: 30px auto 0 auto;
     background: var(--form);
     padding: 20px;
     border-radius: 10px;
@@ -49,7 +48,6 @@ img#emoji-button {
     right: 0px;
     top: 0px;
 }
-
 
 .notice, .blocking-activities {
     display: none;

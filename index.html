@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Gerador de daily</title>
-        <link rel="preload" href="./css/style.css" as="style">
         <link rel="stylesheet" href="./css/style.css">
         <script type="text/javascript" src="./js/script.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
@@ -10,8 +9,8 @@
         <link rel="icon" href="./icons/favicon.ico">
     </head>
     <body>
-        <div class="palette" onclick="changeTheme()">
-            <img src="./icons/palette.svg" alt="">
+        <div class="palette" onclick="togglePalette()">
+            <img src="./icons/palette.svg" alt="" id="palette">
         </div>
         <div id="palette-container">
             <span class="theme-choice theme-dark-default" onclick="setTheme('theme-dark-default')"></span>

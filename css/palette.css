@@ -2,12 +2,12 @@
     width: 35px;
     height: 35px;
     padding: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
     border-radius: 50%;
     background: var(--form);
     cursor: pointer;
-
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .palette:hover {
@@ -21,8 +21,9 @@
 .palette::after {
     content: 'Paleta de cores';
     display: none;
+    width: max-content;
     position: absolute;
-    top: 20px;
+    top: 14px;
     left: 75px;
     background: var(--hover);
     padding: 8px 12px;
@@ -31,7 +32,8 @@
 
 .palette img {
     display: block;
-    margin: auto;
+    padding: 10px;
+    margin: -10px 0 0 -8px;
     filter: var(--icon-color);
 }
 
