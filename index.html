@@ -12,7 +12,7 @@
         <div class="palette" onclick="togglePalette()">
             <img src="./icons/palette.svg" alt="" id="palette">
         </div>
-        <div id="palette-container">
+        <div id="themes">
             <span class="theme-choice theme-dark-default" onclick="setTheme('theme-dark-default')"></span>
             <span class="theme-choice theme-light-default" onclick="setTheme('theme-light-default')"></span>
             <span class="theme-choice theme-dark-purple" onclick="setTheme('theme-dark-purple')"></span>
@@ -21,7 +21,7 @@
             <span class="theme-choice theme-light-pink"  onclick="setTheme('theme-light-pink')"></span>
         </div>
         <main class="content">
-            <div class="title">Gerador de daily</div>
+            <h1 class="title">Gerador de daily</h1>
             <div id="form">
                 <div class="field">
                     <label>Mensagem inicial</label>
@@ -59,7 +59,7 @@ Task B"></textarea>
                     </div>
                     <input type="text" id="notice" class="notice"/>
                 </div>
-                <button onclick="generateDaily()" id="button-generate">
+                <button id="button-generate" onclick="getDaily()">
                     GERAR DAILY
                 </button>
             </div>
@@ -69,7 +69,7 @@ Task B"></textarea>
                     <div id="daily"></div>
                     <img src="./icons/copy.svg" id="button-copy" onclick="copyContent()" title="Copiar">
                 </div>
-                <div onclick="backToDaily()" id="button-back">
+                <div id="button-back" onclick="backToDaily()">
                     <img src="./icons/back.svg" alt="">
                     REVISAR
                 </div>

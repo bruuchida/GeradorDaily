@@ -37,7 +37,7 @@
     filter: var(--icon-color);
 }
 
-#palette-container {
+#themes {
     display: grid;
     background-color: var(--form);
     border-radius: 15px;
@@ -47,7 +47,7 @@
     transition: left 350ms;
 }
 
-#palette-container.show {
+#themes.show {
     left: 20px;
 }
 
