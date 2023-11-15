@@ -14,8 +14,7 @@
     }
 }
 
-.contact a {
-    margin: 0;
+.contact img {
     filter: var(--icon-color);
     width: 32px;
     height: 32px;
