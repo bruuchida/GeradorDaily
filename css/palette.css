@@ -33,20 +33,23 @@
     border-radius: 4px;
 }
 
-.palette-container:hover::before {
-    display: block;
+@media (min-width: 768px) { 
+    .palette-container:hover::before {
+        display: block;
+    }
 }
 
 
 
 #themes {
-    display: grid;
+    display: flex;
     visibility: hidden;
     opacity: 0;
     background-color: var(--form);
     border-radius: 15px;
     position: absolute;
-    top: 80px;
+    top: 10px;
+    right: 65px;
     transition: visibility 200ms, opacity 150ms;
 }
 
@@ -66,6 +69,14 @@
     cursor: pointer;
 }
 
-.theme-choice:hover::before {
-    box-shadow: 0.5px 0 10px var(--hover);
+@media (min-width: 768px) {
+    #themes {
+        display: grid;
+        top: 80px;
+        right: 8px;
+    }
+
+    .theme-choice:hover::before {
+        box-shadow: 0.5px 0 10px var(--hover);
+    }
 }

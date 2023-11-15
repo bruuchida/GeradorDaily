@@ -1,9 +1,16 @@
 .content {
-    max-width: 400px;
-    margin: 30px auto 0 auto;
+    width: 300px;
+    height: fit-content;
     background: var(--form);
     padding: 20px;
     border-radius: 10px;
+    margin: 80px auto;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 400px;
+    }
 }
 
 .title {
@@ -71,9 +78,6 @@
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: start;
 }
 
 #result {

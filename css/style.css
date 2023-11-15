@@ -4,12 +4,10 @@
 @import url("./footer.css");
 
 body {
-    width: 100%;
     margin: 0;
     background: var(--background);
     font-family: Arial;
     color: var(--text);
-    box-sizing: border-box;
 }
 
 a {
@@ -64,5 +62,5 @@ input[type="checkbox" i] {
 }
 
 input[type="checkbox" i]:hover {
-    accent-color: var(--button);
+    accent-color: var(--button-hover);
 }
