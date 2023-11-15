@@ -6,7 +6,6 @@ Gerador de daily para amigos cansados de formatar toda daily no bloco de notas
 - HTML 5
 - CSS 3
 - JS
-- <a href="https://fontawesome.com/v4/icons/" target="_blank"> Font Awesome v4.0 </a>
 - <a href="https://github.com/nolanlawson/emoji-picker-element" target="_blank"> Emoji Picker Element </a>
 
 ## Acesso
