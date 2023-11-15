@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gerador de daily</title>
+        <title>Daily</title>
         <meta http-equiv="X-UA-Compatible" content="IE=7">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
@@ -23,14 +23,14 @@
         </div>
 
         <main class="content">
-            <h1 class="title">Gerador de daily</h1>
+            <h1 class="title">Daily</h1>
             <div id="form">
                 <div class="field">
                     <label>Mensagem inicial</label>
                     <input type="text" id="initial-message" value="Bom dia"/>
                     <div class="emoji" id="emoji">
                         <img src="./icons/emoji.svg" id="emoji-button" class="emoji-button" onclick="toggleEmojiPicker()"/>
-                        <emoji-picker id="emoji-picker" class="emoji-picker"></emoji-picker>
+                        <emoji-picker id="emoji-picker" class="emoji-picker"/>
                     </div>
                 </div>
                 <div class="field">
@@ -61,8 +61,8 @@ Task B"></textarea>
                     </div>
                     <input type="text" id="notice" class="notice"/>
                 </div>
-                <button id="button-generate" onclick="getDaily()">
-                    GERAR DAILY
+                <button id="button-format" onclick="getDaily()">
+                    FORMATAR DAILY
                 </button>
             </div>
             <div id="result">
@@ -83,8 +83,10 @@ Task B"></textarea>
         </main>
 
         <footer class="footer">
-            Feito por <a href="https://github.com/bruuchida" target="_blank" class="author">@bruuchida</a>
-            <img src="../icons/moon.svg" alt="">
+            <div class="contact">
+                <a href="https://github.com/bruuchida" target="_blank"><img src="../icons/github.svg" alt="github"></a>
+                <a href="https://linkedin.com/in/bruna-tiemi-uchida" target="_blank"><img src="../icons/linkedin.svg" alt="linkedin"></a>
+            </div>
             <span id="copied-message"> 📝 Copiado! </span>
         </footer>
     </body>

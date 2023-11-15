@@ -4,7 +4,7 @@
     background: var(--form);
     padding: 20px;
     border-radius: 10px;
-    margin: 80px auto;
+    margin: 80px auto 0;
 }
 
 @media (min-width: 768px) {
@@ -69,7 +69,7 @@
     display: block;
 }
 
-#button-generate {
+#button-format {
     width: 100%;
 }
 

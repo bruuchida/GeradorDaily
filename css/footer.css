@@ -2,16 +2,27 @@
 .footer {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     color: var(--text);
-    gap: 4px;
+    margin: 30px auto;
+    width: 340px;
 }
 
-.footer img {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
+@media (min-width: 768px) {
+    .footer {
+        width: 440px;
+    }
+}
+
+.contact a {
+    margin: 0;
     filter: var(--icon-color);
+}
+
+
+.contact img {
+    width: 32px;
+    height: 32px;
 }
 
 #copied-message {
@@ -27,3 +38,4 @@
 #copied-message.show {
     bottom: 40px;
 }
+
