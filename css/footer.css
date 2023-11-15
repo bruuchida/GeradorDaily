@@ -17,10 +17,6 @@
 .contact a {
     margin: 0;
     filter: var(--icon-color);
-}
-
-
-.contact img {
     width: 32px;
     height: 32px;
 }

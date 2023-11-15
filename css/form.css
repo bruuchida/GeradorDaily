@@ -13,52 +13,21 @@
     }
 }
 
+#form {
+    display: grid;
+    gap: 12px;
+}
+
+
 .title {
     font-size: 26px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
 }
-
-#form {
-    display: grid;
-    gap: 12px;
-}
-
 .field {
     display: grid;
     gap: 4px;
-}
-
-.emoji {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-}
-
-#emoji-button {
-    position: absolute;
-    bottom: 11px;
-    left: calc(100% - 32px);
-    filter: var(--icon-color);
-}
-
-.emoji-picker {
-    display: none;
-    top: 30px;
-    right: -15px;
-    width: 250px;
-    height: 250px;
-    /* variables from emoji picker lib */
-    --num-columns: 5;
-    --category-emoji-size: 1.125rem;
-}
-
-.emoji-picker.show {
-    display: flex;
-    position: absolute;
-    right: 0px;
-    top: 0px;
 }
 
 .notice, .blocking-activities {
@@ -73,15 +42,15 @@
     width: 100%;
 }
 
+#result {
+    display: none;
+}
+
 #daily {
     background: var(--input);
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
-}
-
-#result {
-    display: none;
 }
 
 .actions {
