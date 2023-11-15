@@ -1,0 +1,36 @@
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    margin: 20px auto;
+    width: 340px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        width: 440px;
+    }
+}
+
+.contact img {
+    filter: var(--icon-color);
+    width: 32px;
+    height: 32px;
+}
+
+#copied-message {
+    padding: 10px;
+    background-color: var(--ballon);
+    color: var(--text);
+    border-radius: 10px;
+    position: fixed;
+    bottom: -50px;
+    transition: bottom 350ms;
+}
+
+#copied-message.show {
+    bottom: 40px;
+}
+

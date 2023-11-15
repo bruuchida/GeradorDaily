@@ -1,0 +1,59 @@
+.content {
+    width: 300px;
+    height: fit-content;
+    background: var(--form);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 80px auto 0;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 400px;
+    }
+}
+
+#form {
+    display: grid;
+    gap: 12px;
+}
+
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.field {
+    display: grid;
+    gap: 4px;
+}
+
+.notice, .blocking-activities {
+    display: none;
+}
+
+.notice.show, .blocking-activities.show {
+    display: block;
+}
+
+#button-format {
+    width: 100%;
+}
+
+#result {
+    display: none;
+}
+
+#daily {
+    background: var(--input);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}

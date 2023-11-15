@@ -1,0 +1,31 @@
+
+.emoji {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+#emoji-button {
+    position: absolute;
+    bottom: 11px;
+    left: calc(100% - 32px);
+    filter: var(--icon-color);
+}
+
+.emoji-picker {
+    display: none;
+    top: 30px;
+    right: -15px;
+    width: 250px;
+    height: 250px;
+    /* variables from emoji picker lib */
+    --num-columns: 5;
+    --category-emoji-size: 1.125rem;
+}
+
+.emoji-picker.show {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

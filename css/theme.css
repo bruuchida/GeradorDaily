@@ -1,0 +1,71 @@
+.theme-dark-default {
+    --background: #1d1d20;
+    --form: #3a3a40;
+    --input: #58575a;
+    --text: #fff;
+    --button: #348399; 
+    --ballon: #349943;
+    --hover: #58575a;
+    --button-hover: #216173;
+    --icon-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(101%);
+}
+
+.theme-light-default {
+    --background: #e3e2e2;
+    --form: #ffffff;
+    --input: #eceaf0;
+    --text: #292828;
+    --button: #42bddf; 
+    --ballon: #349943;
+    --hover: #bdbbc0;
+    --button-hover: #3b9fba;
+    --icon-color:  invert(11%) sepia(0%) saturate(0%) hue-rotate(239deg) brightness(94%) contrast(86%);
+}
+
+.theme-dark-pink {
+    --background: #74214b;
+    --form: #953464;
+    --input: #a54a78;
+    --text: #fff;
+    --button: #69133e;
+    --ballon: #c82b79; 
+    --hover: #a54a78;
+    --button-hover: #501231;
+    --icon-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(101%);
+}
+
+.theme-light-pink {
+    --background: #e477ad;
+    --form: #ffa9d4;
+    --input: #ffc0e0;
+    --text: #c82b79;
+    --button: #f282ba;
+    --ballon: #ffa9d4;
+    --hover: #ffc0e0;
+    --button-hover: #c96e9b;
+    --icon-color: invert(22%) sepia(71%) saturate(3106%) hue-rotate(312deg) brightness(87%) contrast(84%);
+}
+
+.theme-dark-purple{
+    --background: #690c81;
+    --form: #78208e;
+    --input: #823096;
+    --text: #fff;
+    --button: #9f55b1;
+    --ballon: #9933b3;
+    --hover: #823096;
+    --button-hover: #874397;
+    --icon-color: invert(100%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(107%) contrast(101%);
+}
+
+.theme-light-purple {
+    --background: #d078e6;
+    --form: #dc91ef;
+    --input: #e0a8ed;
+    --text: #571169;
+    --button: #be6ed2;
+    --ballon: #9933b3;
+    --hover: #b866ca;
+    --button-hover: #a158b3;
+    --icon-color: invert(12%) sepia(39%) saturate(5282%) hue-rotate(276deg) brightness(92%) contrast(102%);
+}
