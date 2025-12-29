@@ -1,8 +1,8 @@
 const date = new Date();
+initTheme();
 
 window.onload = () => {
     getTodayDate();
-    initTheme();
 
     document.querySelector('emoji-picker').addEventListener('emoji-click', e => {
         document.querySelector("#initial-message").value += e.detail.unicode
