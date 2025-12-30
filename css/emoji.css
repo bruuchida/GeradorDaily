@@ -7,7 +7,7 @@
 
 #emoji-button {
     position: absolute;
-    bottom: 11px;
+    bottom: 14px;
     left: calc(100% - 32px);
     filter: var(--icon-color);
 }
@@ -26,6 +26,6 @@
 .emoji-picker.show {
     display: flex;
     position: absolute;
-    right: 0px;
+    right: 2px;
     top: 0px;
 }
